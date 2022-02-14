@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <title></title>
+  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+  <link rel="manifest" href="favicon/site.webmanifest">
+  <style>
+  @font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,d09GRgABAAAAAAZwABAAAAAACFQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABEU0lHAAAGaAAAAAgAAAAIAAAAAUdTVUIAAAZcAAAACgAAAAoAAQAAT1MvMgAAAyQAAABJAAAAYFYEU3RjbWFwAAADcAAAAEUAAACAAJThvmN2dCAAAATkAAAABAAAAAQAAAAAZnBnbQAAA7gAAACyAAABCUM+8IhnYXNwAAAGTAAAABAAAAAQABoAI2dseWYAAAFsAAABPAAAAZwcEq9taGVhZAAAAsgAAAA0AAAANgh4a91oaGVhAAADCAAAABoAAAAkCA8DRGhtdHgAAAL8AAAADAAAAAwGAACfbG9jYQAAAsAAAAAIAAAACABiATBtYXhwAAACqAAAABgAAAAgAA8ASm5hbWUAAAToAAABQgAAAlXu73sOcG9zdAAABiwAAAAeAAAAME3QpOBwcmVwAAAEbAAAAHYAAAB/aFGpk3jaTY6xa8JAGMW/O62BDi0tJLYQincXEypYIiGJjSgHniQ6umTsUEyLm5BV6NDBP8Tpts6F0v+k/0an2i+itHDw3v2+9+DBKTzsJNnWJNTgHEy4BgG3EMI9DCEDOGEXzDADU5hBKMIgNPZqoD3SilVaXZCER3/I7AtxEJLtzzuZfI+VVkprxTlXShWKb3TBecG11rwoNlmmn1P2WYcJczl32etSpKnziC7lQyWe1smVPy/Lt7Kc+0vWY/gAgIIEqAN9we0pwKXreiMasxvabDQMM4riO+qxM2ogwDGOZTXxwxDiycQIcoYFBLj5K3EIaSctAq2kTYiw+ymhce7vwM9jSqO8JyVd5RH9gyTt2+J/yUmYlIR0s04n6+7Vm1ozezUeLEaUjhaDSuXHwVRgvLJn1tQ7xiuVv/ocTRF42mNgZGBgYGbwZOBiAAFGJBIMAAizAFoAAABiAGIAznjaY2BkYGAA4in8zwXi+W2+MjCzMIDApSwvXzC97Z4Ig8N/BxYGZgcgl52BCSQKAA3jCV8CAABfAAAAAAQAAEB42mNgZGBg4f3vACQZQABIMjKgAmYAKEgBXgAAeNpjYGY6wTiBgZWBg2kmUxoDA4MPhGZMYzBi1AHygVLYQUCaawqDA4PChxhmh/8ODDEsvAwHgMKMIDnGL0x7gJQCAwMAJd4MFwAAAHjaY2BgYGaA4DAGRgYQkAHyGMF8NgYrIM3JIAGVYYDT+AEjAwuDFpBmA9KMDEwMCh9i/v8H8sH0/4dQc1iAmAkALaUKLgAAAHjaTY9LDsIgEIbtgqHUPpDi3gPoBVyRTmTddOmqTXThEXqrob2gQ1FjwpDvfwCBdmdXC5AVKFu3e5MfNFJ29KTQT48Ob9/lqYwOGZxeUelN2U2R6+cArgtCJpauW7UQBqnFkUsjAY/kOU1cP+DAgvxwn1chZDwUbd6CFimGXwzwF6tPbFIcjEl+vvmM/byA48e6tWrKArm4ZJlCbdsrxksL1AwWn/yBSJKpYbq8AXaaTb8AAHja28jAwOC00ZrBeQNDQOWO//sdBBgYGRiYWYAEELEwMTE4uzo5Zzo5b2BxdnFOcALxNjA6b2ByTswC8jYwg0VlNuoCTWAMqNzMzsoK1rEhNqByEyerg5PMJlYuVueETKcd/89uBpnpvIEVomeHLoMsAAe1Id4AAAAAAAB42oWQT07CQBTGv0JBhagk7HQzKxca2sJCE1hDt4QF+9JOS0nbaaYDCQfwCJ7Au3AHj+LO13FMmm6cl7785vven0kBjHCBhfpYuNa5Ph1c0e2Xu3jEvWG7UdPDLZ4N92nOm+EBXuAbHmIMSRMs+4aUEd4Nd3CHD8NdvOLTsA2GL8M9PODbcL+hD7C1xoaHeLJSEao0FEW14ckxC+TU8TxvsY6X0eLPmRhry2WVioLpkrbp84LLQPGI7c6sOiUzpWIWS5GzlSgUzzLBSikOPFTOXqly7rqx0Z1Q5BAIoZBSFihQYQOOBEdkCOgXTOHA07HAGjGWiIjaPZNW13/+lm6S9FT7rLHFJ6fQbkATOG1j2OFMucKJJsxIVfQORl+9Jyda6Sl1dUYhSCm1dyClfoeDve4qMYdLEbfqHf3O/AdDumsjAAB42mNgYoAAZQYjBmyAGYQZmdhL8zLdDEydARfoAqIAAAABAAMABwAKABMAB///AA8AAQAAAAAAAAAAAAAAAAABAAAAAA==) format('woff');
+}
+
+.markdown-body .octicon {
+  display: inline-block;
+  fill: currentColor;
+  vertical-align: text-bottom;
+}
+
+.markdown-body .anchor {
+  float: left;
+  line-height: 1;
+  margin-left: -20px;
+  padding-right: 4px;
+}
+
+.markdown-body .anchor:focus {
+  outline: none;
+}
+
+.markdown-body h1 .octicon-link,
+.markdown-body h2 .octicon-link,
+.markdown-body h3 .octicon-link,
+.markdown-body h4 .octicon-link,
+.markdown-body h5 .octicon-link,
+.markdown-body h6 .octicon-link {
+  color: #1b1f23;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+.markdown-body h1:hover .anchor,
+.markdown-body h2:hover .anchor,
+.markdown-body h3:hover .anchor,
+.markdown-body h4:hover .anchor,
+.markdown-body h5:hover .anchor,
+.markdown-body h6:hover .anchor {
+  text-decoration: none;
+}
+
+.markdown-body h1:hover .anchor .octicon-link,
+.markdown-body h2:hover .anchor .octicon-link,
+.markdown-body h3:hover .anchor .octicon-link,
+.markdown-body h4:hover .anchor .octicon-link,
+.markdown-body h5:hover .anchor .octicon-link,
+.markdown-body h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+.markdown-body {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #24292e;
+  line-height: 1.5;
+  font-family: -apple-system,BlinkMacSystemFont,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  line-height: 1.5;
+  word-wrap: break-word;
+}
+
+.markdown-body .pl-c {
+  color: #6a737d;
+}
+
+.markdown-body .pl-c1,
+.markdown-body .pl-s .pl-v {
+  color: #005cc5;
+}
+
+.markdown-body .pl-e,
+.markdown-body .pl-en {
+  color: #6f42c1;
+}
+
+.markdown-body .pl-s .pl-s1,
+.markdown-body .pl-smi {
+  color: #24292e;
+}
+
+.markdown-body .pl-ent {
+  color: #22863a;
+}
+
+.markdown-body .pl-k {
+  color: #d73a49;
+}
+
+.markdown-body .pl-pds,
+.markdown-body .pl-s,
+.markdown-body .pl-s .pl-pse .pl-s1,
+.markdown-body .pl-sr,
+.markdown-body .pl-sr .pl-cce,
+.markdown-body .pl-sr .pl-sra,
+.markdown-body .pl-sr .pl-sre {
+  color: #032f62;
+}
+
+.markdown-body .pl-smw,
+.markdown-body .pl-v {
+  color: #e36209;
+}
+
+.markdown-body .pl-bu {
+  color: #b31d28;
+}
+
+.markdown-body .pl-ii {
+  background-color: #b31d28;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2 {
+  background-color: #d73a49;
+  color: #fafbfc;
+}
+
+.markdown-body .pl-c2:before {
+  content: "^M";
+}
+
+.markdown-body .pl-sr .pl-cce {
+  color: #22863a;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ml {
+  color: #735c0f;
+}
+
+.markdown-body .pl-mh,
+.markdown-body .pl-mh .pl-en,
+.markdown-body .pl-ms {
+  color: #005cc5;
+  font-weight: 700;
+}
+
+.markdown-body .pl-mi {
+  color: #24292e;
+  font-style: italic;
+}
+
+.markdown-body .pl-mb {
+  color: #24292e;
+  font-weight: 700;
+}
+
+.markdown-body .pl-md {
+  background-color: #ffeef0;
+  color: #b31d28;
+}
+
+.markdown-body .pl-mi1 {
+  background-color: #f0fff4;
+  color: #22863a;
+}
+
+.markdown-body .pl-mc {
+  background-color: #ffebda;
+  color: #e36209;
+}
+
+.markdown-body .pl-mi2 {
+  background-color: #005cc5;
+  color: #f6f8fa;
+}
+
+.markdown-body .pl-mdr {
+  color: #6f42c1;
+  font-weight: 700;
+}
+
+.markdown-body .pl-ba {
+  color: #586069;
+}
+
+.markdown-body .pl-sg {
+  color: #959da5;
+}
+
+.markdown-body .pl-corl {
+  color: #032f62;
+  text-decoration: underline;
+}
+
+.markdown-body details {
+  display: block;
+}
+
+.markdown-body summary {
+  display: list-item;
+}
+
+.markdown-body a {
+  background-color: transparent;
+}
+
+.markdown-body a:active,
+.markdown-body a:hover {
+  outline-width: 0;
+}
+
+.markdown-body strong {
+  font-weight: inherit;
+  font-weight: bolder;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+  margin: .67em 0;
+}
+
+.markdown-body img {
+  border-style: none;
+}
+
+.markdown-body code,
+.markdown-body kbd,
+.markdown-body pre {
+  font-family: monospace,monospace;
+  font-size: 1em;
+}
+
+.markdown-body hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+.markdown-body input {
+  font: inherit;
+  margin: 0;
+}
+
+.markdown-body input {
+  overflow: visible;
+}
+
+.markdown-body [type=checkbox] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+.markdown-body * {
+  box-sizing: border-box;
+}
+
+.markdown-body input {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+.markdown-body a {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.markdown-body a:hover {
+  text-decoration: underline;
+}
+
+.markdown-body strong {
+  font-weight: 600;
+}
+
+.markdown-body hr {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #dfe2e5;
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.markdown-body hr:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body hr:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.markdown-body td,
+.markdown-body th {
+  padding: 0;
+}
+
+.markdown-body details summary {
+  cursor: pointer;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body h1 {
+  font-size: 32px;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  font-weight: 600;
+}
+
+.markdown-body h2 {
+  font-size: 24px;
+}
+
+.markdown-body h3 {
+  font-size: 20px;
+}
+
+.markdown-body h3,
+.markdown-body h4 {
+  font-weight: 600;
+}
+
+.markdown-body h4 {
+  font-size: 16px;
+}
+
+.markdown-body h5 {
+  font-size: 14px;
+}
+
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+}
+
+.markdown-body h6 {
+  font-size: 12px;
+}
+
+.markdown-body p {
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.markdown-body blockquote {
+  margin: 0;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  margin-bottom: 0;
+  margin-top: 0;
+  padding-left: 0;
+}
+
+.markdown-body ol ol,
+.markdown-body ul ol {
+  list-style-type: lower-roman;
+}
+
+.markdown-body ol ol ol,
+.markdown-body ol ul ol,
+.markdown-body ul ol ol,
+.markdown-body ul ul ol {
+  list-style-type: lower-alpha;
+}
+
+.markdown-body dd {
+  margin-left: 0;
+}
+
+.markdown-body code,
+.markdown-body pre {
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+}
+
+.markdown-body pre {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body input::-webkit-inner-spin-button,
+.markdown-body input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  appearance: none;
+  margin: 0;
+}
+
+.markdown-body .border {
+  border: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .border-0 {
+  border: 0!important;
+}
+
+.markdown-body .border-bottom {
+  border-bottom: 1px solid #e1e4e8!important;
+}
+
+.markdown-body .rounded-1 {
+  border-radius: 3px!important;
+}
+
+.markdown-body .bg-white {
+  background-color: #fff!important;
+}
+
+.markdown-body .bg-gray-light {
+  background-color: #fafbfc!important;
+}
+
+.markdown-body .text-gray-light {
+  color: #6a737d!important;
+}
+
+.markdown-body .mb-0 {
+  margin-bottom: 0!important;
+}
+
+.markdown-body .my-2 {
+  margin-bottom: 8px!important;
+  margin-top: 8px!important;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .py-0 {
+  padding-bottom: 0!important;
+  padding-top: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .py-2 {
+  padding-bottom: 8px!important;
+  padding-top: 8px!important;
+}
+
+.markdown-body .pl-3,
+.markdown-body .px-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .px-3 {
+  padding-right: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .f6 {
+  font-size: 12px!important;
+}
+
+.markdown-body .lh-condensed {
+  line-height: 1.25!important;
+}
+
+.markdown-body .text-bold {
+  font-weight: 600!important;
+}
+
+.markdown-body:before {
+  content: "";
+  display: table;
+}
+
+.markdown-body:after {
+  clear: both;
+  content: "";
+  display: table;
+}
+
+.markdown-body>:first-child {
+  margin-top: 0!important;
+}
+
+.markdown-body>:last-child {
+  margin-bottom: 0!important;
+}
+
+.markdown-body a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+.markdown-body blockquote,
+.markdown-body dl,
+.markdown-body ol,
+.markdown-body p,
+.markdown-body pre,
+.markdown-body table,
+.markdown-body ul {
+  margin-bottom: 16px;
+  margin-top: 0;
+}
+
+.markdown-body hr {
+  background-color: #e1e4e8;
+  border: 0;
+  height: .25em;
+  margin: 24px 0;
+  padding: 0;
+}
+
+.markdown-body blockquote {
+  border-left: .25em solid #dfe2e5;
+  color: #6a737d;
+  padding: 0 1em;
+}
+
+.markdown-body blockquote>:first-child {
+  margin-top: 0;
+}
+
+.markdown-body blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #c6cbd1;
+  border-bottom-color: #959da5;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #959da5;
+  color: #444d56;
+  display: inline-block;
+  font-size: 11px;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  line-height: 1.25;
+  margin-bottom: 16px;
+  margin-top: 24px;
+}
+
+.markdown-body h1 {
+  font-size: 2em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: 1px solid #eaecef;
+  padding-bottom: .3em;
+}
+
+.markdown-body h2 {
+  font-size: 1.5em;
+}
+
+.markdown-body h3 {
+  font-size: 1.25em;
+}
+
+.markdown-body h4 {
+  font-size: 1em;
+}
+
+.markdown-body h5 {
+  font-size: .875em;
+}
+
+.markdown-body h6 {
+  color: #6a737d;
+  font-size: .85em;
+}
+
+.markdown-body ol,
+.markdown-body ul {
+  padding-left: 2em;
+}
+
+.markdown-body ol ol,
+.markdown-body ol ul,
+.markdown-body ul ol,
+.markdown-body ul ul {
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.markdown-body li {
+  word-wrap: break-all;
+}
+
+.markdown-body li>p {
+  margin-top: 16px;
+}
+
+.markdown-body li+li {
+  margin-top: .25em;
+}
+
+.markdown-body dl {
+  padding: 0;
+}
+
+.markdown-body dl dt {
+  font-size: 1em;
+  font-style: italic;
+  font-weight: 600;
+  margin-top: 16px;
+  padding: 0;
+}
+
+.markdown-body dl dd {
+  margin-bottom: 16px;
+  padding: 0 16px;
+}
+
+.markdown-body table {
+  display: block;
+  overflow: auto;
+  width: 100%;
+}
+
+.markdown-body table th {
+  font-weight: 600;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #dfe2e5;
+  padding: 6px 13px;
+}
+
+.markdown-body table tr {
+  background-color: #fff;
+  border-top: 1px solid #c6cbd1;
+}
+
+.markdown-body table tr:nth-child(2n) {
+  background-color: #f6f8fa;
+}
+
+.markdown-body img {
+  background-color: #fff;
+  box-sizing: content-box;
+  max-width: 100%;
+}
+
+.markdown-body img[align=right] {
+  padding-left: 20px;
+}
+
+.markdown-body img[align=left] {
+  padding-right: 20px;
+}
+
+.markdown-body code {
+  background-color: rgba(27,31,35,.05);
+  border-radius: 3px;
+  font-size: 85%;
+  margin: 0;
+  padding: .2em .4em;
+}
+
+.markdown-body pre {
+  word-wrap: normal;
+}
+
+.markdown-body pre>code {
+  background: transparent;
+  border: 0;
+  font-size: 100%;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  word-break: normal;
+}
+
+.markdown-body .highlight {
+  margin-bottom: 16px;
+}
+
+.markdown-body .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border-radius: 3px;
+  font-size: 85%;
+  line-height: 1.45;
+  overflow: auto;
+  padding: 16px;
+}
+
+.markdown-body pre code {
+  background-color: transparent;
+  border: 0;
+  display: inline;
+  line-height: inherit;
+  margin: 0;
+  max-width: auto;
+  overflow: visible;
+  padding: 0;
+  word-wrap: normal;
+}
+
+.markdown-body .commit-tease-sha {
+  color: #444d56;
+  display: inline-block;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 90%;
+}
+
+.markdown-body .blob-wrapper {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+  overflow-x: auto;
+  overflow-y: hidden;
+}
+
+.markdown-body .blob-wrapper-embedded {
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.markdown-body .blob-num {
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-select: none;
+  color: rgba(27,31,35,.3);
+  cursor: pointer;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  line-height: 20px;
+  min-width: 50px;
+  padding-left: 10px;
+  padding-right: 10px;
+  text-align: right;
+  user-select: none;
+  vertical-align: top;
+  white-space: nowrap;
+  width: 1%;
+}
+
+.markdown-body .blob-num:hover {
+  color: rgba(27,31,35,.6);
+}
+
+.markdown-body .blob-num:before {
+  content: attr(data-line-number);
+}
+
+.markdown-body .blob-code {
+  line-height: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  vertical-align: top;
+}
+
+.markdown-body .blob-code-inner {
+  color: #24292e;
+  font-family: SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  font-size: 12px;
+  overflow: visible;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+.markdown-body .pl-token.active,
+.markdown-body .pl-token:hover {
+  background: #ffea7f;
+  cursor: pointer;
+}
+
+.markdown-body kbd {
+  background-color: #fafbfc;
+  border: 1px solid #d1d5da;
+  border-bottom-color: #c6cbd1;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #c6cbd1;
+  color: #444d56;
+  display: inline-block;
+  font: 11px SFMono-Regular,Consolas,Liberation Mono,Menlo,Courier,monospace;
+  line-height: 10px;
+  padding: 3px 5px;
+  vertical-align: middle;
+}
+
+.markdown-body :checked+.radio-label {
+  border-color: #0366d6;
+  position: relative;
+  z-index: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="1"] {
+  -moz-tab-size: 1;
+  tab-size: 1;
+}
+
+.markdown-body .tab-size[data-tab-size="2"] {
+  -moz-tab-size: 2;
+  tab-size: 2;
+}
+
+.markdown-body .tab-size[data-tab-size="3"] {
+  -moz-tab-size: 3;
+  tab-size: 3;
+}
+
+.markdown-body .tab-size[data-tab-size="4"] {
+  -moz-tab-size: 4;
+  tab-size: 4;
+}
+
+.markdown-body .tab-size[data-tab-size="5"] {
+  -moz-tab-size: 5;
+  tab-size: 5;
+}
+
+.markdown-body .tab-size[data-tab-size="6"] {
+  -moz-tab-size: 6;
+  tab-size: 6;
+}
+
+.markdown-body .tab-size[data-tab-size="7"] {
+  -moz-tab-size: 7;
+  tab-size: 7;
+}
+
+.markdown-body .tab-size[data-tab-size="8"] {
+  -moz-tab-size: 8;
+  tab-size: 8;
+}
+
+.markdown-body .tab-size[data-tab-size="9"] {
+  -moz-tab-size: 9;
+  tab-size: 9;
+}
+
+.markdown-body .tab-size[data-tab-size="10"] {
+  -moz-tab-size: 10;
+  tab-size: 10;
+}
+
+.markdown-body .tab-size[data-tab-size="11"] {
+  -moz-tab-size: 11;
+  tab-size: 11;
+}
+
+.markdown-body .tab-size[data-tab-size="12"] {
+  -moz-tab-size: 12;
+  tab-size: 12;
+}
+
+.markdown-body .task-list-item {
+  list-style-type: none;
+}
+
+.markdown-body .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+.markdown-body .task-list-item input {
+  margin: 0 .2em .25em -1.6em;
+  vertical-align: middle;
+}
+
+.markdown-body hr {
+  border-bottom-color: #eee;
+}
+
+.markdown-body .pl-0 {
+  padding-left: 0!important;
+}
+
+.markdown-body .pl-1 {
+  padding-left: 4px!important;
+}
+
+.markdown-body .pl-2 {
+  padding-left: 8px!important;
+}
+
+.markdown-body .pl-3 {
+  padding-left: 16px!important;
+}
+
+.markdown-body .pl-4 {
+  padding-left: 24px!important;
+}
+
+.markdown-body .pl-5 {
+  padding-left: 32px!important;
+}
+
+.markdown-body .pl-6 {
+  padding-left: 40px!important;
+}
+
+.markdown-body .pl-7 {
+  padding-left: 48px!important;
+}
+
+.markdown-body .pl-8 {
+  padding-left: 64px!important;
+}
+
+.markdown-body .pl-9 {
+  padding-left: 80px!important;
+}
+
+.markdown-body .pl-10 {
+  padding-left: 96px!important;
+}
+
+.markdown-body .pl-11 {
+  padding-left: 112px!important;
+}
+
+.markdown-body .pl-12 {
+  padding-left: 128px!important;
+}
+
+  </style>
+  <style>
+  /**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	font-size: 1em;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.token.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #9a6e3a;
+	/* This background color was intended by the author of this theme. */
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function,
+.token.class-name {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+
+  </style>
+  <style>
+  
+  </style>
+  <style>
+    .markdown-body {
+      font-family: -apple-system,Segoe UI,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji;
+      box-sizing: border-box;
+      min-width: 200px;
+      max-width: 980px;
+      margin: 0 auto;
+      padding: 45px;
+    }
+
+    @media not print {
+      .markdown-body {
+        padding: 45px;
+      }
+
+      @media (max-width: 767px) {
+        .markdown-body {
+          padding: 15px;
+        }
+      }
+    }
+
+    .hf-container {
+      color: #24292e;
+      line-height: 1.3;
+    }
+
+    .markdown-body .highlight pre,
+    .markdown-body pre {
+      white-space: pre-wrap;
+    }
+    .markdown-body table {
+      display: table;
+    }
+    .markdown-body img[data-align="center"] {
+      display: block;
+      margin: 0 auto;
+    }
+    .markdown-body img[data-align="right"] {
+      display: block;
+      margin: 0 0 0 auto;
+    }
+    .markdown-body li.task-list-item {
+      list-style-type: none;
+    }
+    .markdown-body li > [type=checkbox] {
+      margin: 0 0 0 -1.3em;
+    }
+    .markdown-body input[type="checkbox"] ~ p {
+      margin-top: 0;
+      display: inline-block;
+    }
+    .markdown-body ol ol,
+    .markdown-body ul ol {
+      list-style-type: decimal;
+    }
+    .markdown-body ol ol ol,
+    .markdown-body ol ul ol,
+    .markdown-body ul ol ol,
+    .markdown-body ul ul ol {
+      list-style-type: decimal;
+    }
+  </style>
+  <style>.markdown-body a.footnote-ref {
+  text-decoration: none;
+}
+
+.footnotes {
+  font-size: .85em;
+  opacity: .8;
+}
+
+.footnotes li[role="doc-endnote"] {
+  position: relative;
+}
+
+.footnotes .footnote-back {
+  position: absolute;
+  font-family: initial;
+  top: .2em;
+  right: 1em;
+  text-decoration: none;
+}
+
+.inline-math.invalid,
+.multiple-math.invalid {
+  color: rgb(255, 105, 105);
+}
+
+.toc-container {
+  width: 100%;
+}
+
+.toc-container .toc-title {
+  font-weight: 700;
+  font-size: 1.2em;
+  margin-bottom: 0;
+}
+
+.toc-container li,
+.toc-container ul,
+.toc-container ul li {
+  list-style: none !important;
+}
+
+.toc-container > ul {
+  padding-left: 0;
+}
+
+.toc-container ul li span {
+  display : flex;
+}
+
+.toc-container ul li span a {
+  color: inherit;
+  text-decoration: none;
+}
+.toc-container ul li span a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+.toc-container ul li span span.dots {
+  flex: 1;
+  height: 0.65em;
+  margin: 0 10px;
+  border-bottom: 2px dotted black;
+}
+</style>
+  <style>.markdown-body{}pre.front-matter{display:none!important;}/** Academic **/
+
+/* DejaVu Serif should use 11pt */
+.hf-container,
+.markdown-body {
+  font-family: Georgia,Palatino,"Palatino Linotype","Times New Roman","DejaVu Serif",serif,"Apple Color Emoji","Segoe UI Emoji";
+  font-size: 12pt;
+  line-height: 1.3;
+  color: #212121;
+}
+
+:root {
+  --footerHeaderBorderColor: #1c1c1c;
+}
+.hf-container {
+  font-size: 0.75em;
+}
+.page-header:not(.simple) .hf-container {
+  padding-bottom: 2px;
+  border-bottom: 1px solid var(--footerHeaderBorderColor);
+}
+.page-footer:not(.simple) .hf-container {
+  padding-top: 2px;
+  border-top: 1px solid var(--footerHeaderBorderColor);
+}
+
+.footnotes {
+  font-size: 0.75em;
+  opacity: 0.9;
+}
+.footnotes > hr:first-of-type {
+  width: 250px;
+  height: 1px;
+  background: var(--footerHeaderBorderColor);
+}
+.footnotes > ol > li > p {
+  margin-top: 4px;
+  margin-bottom: 4px;
+}
+
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3,
+.markdown-body h4,
+.markdown-body h5,
+.markdown-body h6 {
+  font-weight: 600;
+  color: #282828;
+}
+
+.markdown-body h1 {
+  font-size: 1.8em;
+}
+.markdown-body h2 {
+  font-size: 1.6em;
+}
+.markdown-body h3 {
+  font-size: 1.4em;
+}
+.markdown-body h4,
+.markdown-body h5 {
+  font-size: 1.2em;
+}
+.markdown-body h6 {
+  font-size: 1em;
+}
+
+.markdown-body h1,
+.markdown-body h2 {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.markdown-body a {
+  color: #212121;
+  text-decoration: underline;
+}
+
+.markdown-body hr {
+  background-color: #b0b0b0;
+  height: 1px;
+}
+
+.markdown-body blockquote {
+  border: none;
+  color: #282828;
+  padding: 0 1em;
+  margin-left: 20px;
+}
+
+.markdown-body .highlight pre,
+.markdown-body pre {
+  background-color: #f6f8fa;
+  border: 1px solid #e5e5e5;
+  border-radius: 0;
+}
+
+.markdown-body table td,
+.markdown-body table th {
+  border: 1px solid #1a1a1a;
+  padding: 2px 6px;
+}
+.markdown-body table tr {
+  background: none;
+  border-top: 1px solid #1a1a1a;
+  text-align: left;
+}
+.markdown-body table tr:nth-child(2n) {
+  background: none;
+}
+</style>
+</head>
+<body>
+    <header>
+      <nav class="nav pt-4 container" style="font-family: EB Garamond; font-size: 28px;">
+        <a href="/" class="active logo" style="color: #000;">dumrich</a>
+      </nav>
+    <header>
+  <style type="text/css">
+    .logo {
+      text-decoration: none;
+    }
+  
+    .logo:hover {
+      text-decoration: underline;
+    }
+  </style>
+  <article class="markdown-body">
+      <h1 id="building-a-high-level-tui-framework-in-rust">Building a high level TUI framework in Rust</h1>
+      <figure>
+      <img src="https://imgs.xkcd.com/comics/command_line_fu.png" alt="Command Line Fu" /><figcaption aria-hidden="true">Command Line Fu</figcaption>
+      </figure>
+      <blockquote>
+      <p>Source: <a href="https://xkcd.com/196/">xkcd: Command Line Fu</a></p>
+      </blockquote>
+      <p>If you’re reading this blog post, you love Unix. And if you love Unix, you love the command line. You may not know it yet, but I assure you that it will eventually ring true.</p>
+      <p>A step above the command line is the <strong>TUI (Terminal User Interface)</strong>. A TUI, as you may know, is a more interactive command line application that allows for user input, and cool looking widgets. Some of the more popular of these applications are <code>vim</code> , <code>htop</code>, or <code>lynx</code>.</p>
+      <p>In the spirit of recreating things that I love, I decided to build a TUI framework in Rust.</p>
+      <p><strong>Repo:</strong> https://git.dumrich.com/zui/</p>
+      <p><strong>Crate(s)</strong>: https://crates.io/crates/zui-core, https://crates.io/crates/zui-widgets</p>
+      <p>Make sure you import the two crates above!</p>
+      <h2 id="escape-codes">Escape Codes</h2>
+      <p>The most essential concept to creating terminal applications are <code>escape codes</code> or <code>escape sequences</code>. They’re just strings that the terminal interprets to change the way it displays something. Check <a href="https://gist.github.com/fnky/458719343aabd01cfb17a3a4f7296797">here</a> for a list of the most important ones.</p>
+      <p>Escape codes are the most direct way to control the terminal, including things like:</p>
+      <ul>
+      <li><p>Colors</p></li>
+      <li><p>Styles</p></li>
+      <li><p>Cursor Movement</p></li>
+      <li><p>Terminal Clearing</p></li>
+      <li><p>User Input</p></li>
+      <li><p>and more…</p></li>
+      </ul>
+      <p>First up, is Colors and Styles</p>
+      <h2 id="colors-and-styles">Colors and Styles</h2>
+      <p>These two are probably the easiest to implement and use as a style and a color map directly to an ANSI escape code:</p>
+      <div class="sourceCode" id="cb1"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">enum</span> Color <span class="op">{</span></span>
+      <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    Black<span class="op">,</span></span>
+      <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    Red<span class="op">,</span></span>
+      <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>    Green<span class="op">,</span></span>
+      <span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>    Yellow<span class="op">,</span></span>
+      <span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>    Blue<span class="op">,</span></span>
+      <span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>    Purple<span class="op">,</span></span>
+      <span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    Cyan<span class="op">,</span></span>
+      <span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>    White<span class="op">,</span></span>
+      <span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+      <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <p>I first created an Enum as an abstraction over a raw code.</p>
+      <div class="sourceCode" id="cb2"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> color <span class="op">{</span></span>
+      <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Black <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[30m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Red <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[31m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Green <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[32m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Yellow <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[33m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Blue <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[34m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Purple <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[35m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>Cyan <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[36m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>        <span class="pp">Color::</span>White <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[37m&quot;</span><span class="op">,</span></span>
+      <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span></span>
+      <span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <p>I then match each <code>enum</code> variant to a <code>&amp;'static str</code> escape code.</p>
+      <p>Styles are largely the same:</p>
+      <div class="sourceCode" id="cb3"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">enum</span> Style <span class="op">{</span></span>
+      <span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>    Dim<span class="op">,</span></span>
+      <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>    Reverse<span class="op">,</span></span>
+      <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    Invisible<span class="op">,</span></span>
+      <span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>    Bold<span class="op">,</span></span>
+      <span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>    Italic<span class="op">,</span></span>
+      <span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>    Underline<span class="op">,</span></span>
+      <span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    Blinking<span class="op">,</span></span>
+      <span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    Strike<span class="op">,</span></span>
+      <span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="op">...</span></span>
+      <span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <div class="sourceCode" id="cb4"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">match</span> style <span class="op">{</span></span>
+      <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>        Dim <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[2m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>        Reverse <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[7m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>        Invisible <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[8m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a>        Bold <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[1m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        Italic <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[3m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        Underline <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[4m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-8"><a href="#cb4-8" aria-hidden="true" tabindex="-1"></a>        Blinking <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[5m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-9"><a href="#cb4-9" aria-hidden="true" tabindex="-1"></a>        Strike <span class="op">=&gt;</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[9m&quot;</span><span class="op">,</span></span>
+      <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">...</span></span>
+      <span id="cb4-11"><a href="#cb4-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+      <p>We could use these functions as so:</p>
+      <div class="sourceCode" id="cb5"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::style::</span><span class="op">{</span>set<span class="op">,</span> Style<span class="op">};</span></span>
+      <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::color::</span><span class="op">{</span>set<span class="op">,</span> fg<span class="op">};</span></span>
+      <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+      <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>    <span class="pp">println!</span>(<span class="st">&quot;{}I&#39;m Red{} Now I&#39;m bold&quot;</span><span class="op">,</span> fg(<span class="pp">color::</span>Color)<span class="op">,</span> set(<span class="pp">Style::</span>Bold))<span class="op">;</span></span>
+      <span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <h2 id="cursor-and-clearing">Cursor and Clearing</h2>
+      <p>Cursor manipulation and clearing are pretty similar to styles and colors.</p>
+      <p>Upon writing a cursor escape code to the <code>stdout</code>, the terminal will move the cursor to a specific coordinate (like x, y). Same for one of the clear codes.</p>
+      <p>You can see a full list of all methods <a href="https://git.dumrich.com/zui/tree/src/term/mod.rs#n143">here</a>.</p>
+      <p>Here is an example of the codes required to set the cursor position and change the type of cursor:</p>
+      <div class="sourceCode" id="cb6"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>    pub <span class="kw">fn</span> set_cursor_to(<span class="op">&amp;</span><span class="kw">mut</span> <span class="kw">self</span><span class="op">,</span> x_pos<span class="op">:</span> <span class="dt">u16</span><span class="op">,</span> y_pos<span class="op">:</span> <span class="dt">u16</span>) <span class="op">-&gt;</span> <span class="pp">io::</span><span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">&gt;</span> <span class="op">{</span></span>
+      <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>        <span class="cf">if</span> x_pos <span class="op">&lt;=</span> <span class="kw">self</span><span class="op">.</span>rel_size<span class="op">.</span><span class="dv">0</span> <span class="op">&amp;&amp;</span> y_pos <span class="op">&lt;=</span> <span class="kw">self</span><span class="op">.</span>rel_size<span class="op">.</span><span class="dv">1</span> <span class="op">{</span></span>
+      <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>            <span class="kw">let</span> result <span class="op">=</span> <span class="pp">write!</span>(<span class="kw">self</span><span class="op">.</span>stdout<span class="op">,</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[{};{}f&quot;</span><span class="op">,</span> y_pos<span class="op">,</span> x_pos)<span class="op">?;</span></span>
+      <span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>            <span class="kw">self</span><span class="op">.</span>stdout<span class="op">.</span>flush()<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>            <span class="kw">self</span><span class="op">.</span>x_pos <span class="op">=</span> x_pos<span class="op">;</span></span>
+      <span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>            <span class="kw">self</span><span class="op">.</span>y_pos <span class="op">=</span> y_pos<span class="op">;</span></span>
+      <span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>            <span class="cn">Ok</span>(result)</span>
+      <span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span> <span class="cf">else</span> <span class="op">{</span></span>
+      <span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>            <span class="pp">panic!</span>(<span class="st">&quot;Cursor set to out of bounds&quot;</span>)<span class="op">;</span></span>
+      <span id="cb6-10"><a href="#cb6-10" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+      <span id="cb6-11"><a href="#cb6-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+      <p>The code “<code>\u{001b}[{x};{y}f</code>”. This specific code expects the coordinates of the cursor location.</p>
+      <p>Escape codes can also let us change the type of the cursor:</p>
+      <div class="sourceCode" id="cb7"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>    <span class="kw">pub</span> <span class="kw">fn</span> blinking_block(<span class="op">&amp;</span><span class="kw">mut</span> <span class="kw">self</span>) <span class="op">-&gt;</span> <span class="pp">io::</span><span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">&gt;</span> <span class="op">{</span></span>
+      <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>        <span class="kw">self</span><span class="op">.</span>cursor_mode <span class="op">=</span> <span class="pp">Cursor::</span>BlinkingBlock<span class="op">;</span></span>
+      <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> result <span class="op">=</span> <span class="pp">write!</span>(<span class="kw">self</span><span class="op">.</span>stdout<span class="op">,</span> <span class="st">&quot;</span><span class="sc">\u{001b}</span><span class="st">[1 q&quot;</span>)<span class="op">?;</span></span>
+      <span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a>        <span class="kw">self</span><span class="op">.</span>stdout<span class="op">.</span>flush()<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>        <span class="cn">Ok</span>(result)</span>
+      <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span></code></pre></div>
+      <p>Now let’s see how we would use some of these clearing and cursor methods:</p>
+      <div class="sourceCode" id="cb8"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::</span>term<span class="op">;</span></span>
+      <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span>io<span class="op">;</span></span>
+      <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+      <span id="cb8-5"><a href="#cb8-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> stdout <span class="op">=</span> <span class="pp">io::</span>stdout()<span class="op">;</span></span>
+      <span id="cb8-6"><a href="#cb8-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> terminal <span class="op">=</span> <span class="pp">term::</span>Terminal(<span class="op">&amp;</span><span class="kw">mut</span> stdout)<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb8-7"><a href="#cb8-7" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb8-8"><a href="#cb8-8" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Clear the current Line</span></span>
+      <span id="cb8-9"><a href="#cb8-9" aria-hidden="true" tabindex="-1"></a>    terminal<span class="op">.</span>clear_line()<span class="op">.</span>unwrap()<span class="op">;</span> </span>
+      <span id="cb8-10"><a href="#cb8-10" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb8-11"><a href="#cb8-11" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Move cursor</span></span>
+      <span id="cb8-12"><a href="#cb8-12" aria-hidden="true" tabindex="-1"></a>    terminal<span class="op">.</span>set_cursor_to(<span class="dv">1</span><span class="op">,</span> <span class="dv">4</span>)<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb8-13"><a href="#cb8-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <h2 id="input-and-raw-mode">Input and Raw Mode</h2>
+      <p>This is where it starts to get complicated. Let me explain.</p>
+      <p>When you’re running your python program using <code>input()</code>, or a basic program that collects some sort of input, your terminal is in what is known as <strong>Cannonical Mode</strong>. Cannonical mode is good enough for simple programs as it will write out any character the user writes to <code>stdout</code> and only processes the text when the user hits enter.</p>
+      <p>While this is great for most programs, we want our terminal framework to go above and beyond. We want to capture every user input and do some extra processing. For example, <code>htop</code> doesn’t display every input character by default. This is because raw mode, the terminal mode we want, achieves a few things:</p>
+      <ul>
+      <li><p>Doesn’t display all characters</p></li>
+      <li><p>Be able to process all characters as soon as they’re pressed (opposed to pressing enter to get the bytes)</p></li>
+      </ul>
+      <p>There was no way to do this easily in Rust, so I needed to use <code>libc</code>.</p>
+      <div class="sourceCode" id="cb9"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co">// Enter Raw mode</span></span>
+      <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">use</span> <span class="pp">libc::</span>termios <span class="kw">as</span> Termios<span class="op">;</span></span>
+      <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a><span class="kw">extern</span> <span class="st">&quot;C&quot;</span> <span class="op">{</span></span>
+      <span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> tcgetattr(fd<span class="op">:</span> <span class="pp">raw::</span><span class="dt">c_int</span><span class="op">,</span> termios<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Termios) <span class="op">-&gt;</span> <span class="pp">raw::</span><span class="dt">c_int</span><span class="op">;</span></span>
+      <span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> tcsetattr(fd<span class="op">:</span> <span class="pp">raw::</span><span class="dt">c_int</span><span class="op">,</span> optional_actions<span class="op">:</span> <span class="pp">raw::</span><span class="dt">c_int</span><span class="op">,</span> termios<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Termios)</span>
+      <span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>        <span class="op">-&gt;</span> <span class="pp">raw::</span><span class="dt">c_int</span><span class="op">;</span></span>
+      <span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">fn</span> cfmakeraw(termios<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Termios)<span class="op">;</span></span>
+      <span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <p>These are the functions to enter raw mode. We are able to use <code>libc</code> functions as Rust links against <code>libc</code>. These three functions allow us to enter raw mode by setting and getting various terminal attributes:</p>
+      <div class="sourceCode" id="cb10"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> get_attr() <span class="op">-&gt;</span> Termios <span class="op">{</span></span>
+      <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a>    <span class="kw">unsafe</span> <span class="op">{</span></span>
+      <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> <span class="kw">mut</span> termios <span class="op">=</span> <span class="pp">core::mem::</span>zeroed()<span class="op">;</span></span>
+      <span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>        tcgetattr(<span class="dv">1</span><span class="op">,</span> <span class="op">&amp;</span><span class="kw">mut</span> termios)<span class="op">;</span></span>
+      <span id="cb10-5"><a href="#cb10-5" aria-hidden="true" tabindex="-1"></a>        termios</span>
+      <span id="cb10-6"><a href="#cb10-6" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+      <span id="cb10-7"><a href="#cb10-7" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+      <span id="cb10-8"><a href="#cb10-8" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb10-9"><a href="#cb10-9" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> set_attr(termios<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Termios) <span class="op">{</span></span>
+      <span id="cb10-10"><a href="#cb10-10" aria-hidden="true" tabindex="-1"></a>    <span class="kw">unsafe</span> <span class="op">{</span></span>
+      <span id="cb10-11"><a href="#cb10-11" aria-hidden="true" tabindex="-1"></a>        tcsetattr(<span class="dv">1</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> termios)<span class="op">;</span></span>
+      <span id="cb10-12"><a href="#cb10-12" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+      <span id="cb10-13"><a href="#cb10-13" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span>
+      <span id="cb10-14"><a href="#cb10-14" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb10-15"><a href="#cb10-15" aria-hidden="true" tabindex="-1"></a><span class="kw">pub</span> <span class="kw">fn</span> set_raw(termios<span class="op">:</span> <span class="op">&amp;</span><span class="kw">mut</span> Termios) <span class="op">{</span></span>
+      <span id="cb10-16"><a href="#cb10-16" aria-hidden="true" tabindex="-1"></a>    <span class="kw">unsafe</span> <span class="op">{</span></span>
+      <span id="cb10-17"><a href="#cb10-17" aria-hidden="true" tabindex="-1"></a>        cfmakeraw(termios)<span class="op">;</span></span>
+      <span id="cb10-18"><a href="#cb10-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+      <span id="cb10-19"><a href="#cb10-19" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <h3 id="getting-user-input">Getting User Input</h3>
+      <p>Now that we can read bytes individually, we can actually read the bytes. Let’s see how to do that.</p>
+      <div class="sourceCode" id="cb11"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::</span>term<span class="op">;</span></span>
+      <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span>io<span class="op">;</span></span>
+      <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::key::</span>Key<span class="op">;</span></span>
+      <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">{</span></span>
+      <span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> stdout <span class="op">=</span> <span class="pp">io::</span>stdout()<span class="op">;</span></span>
+      <span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> terminal <span class="op">=</span> <span class="pp">term::</span>Terminal(<span class="op">&amp;</span><span class="kw">mut</span> stdout)<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key <span class="kw">in</span> terminal<span class="op">.</span>keys() <span class="op">{</span></span>
+      <span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>        <span class="cf">match</span> key <span class="op">{</span></span>
+      <span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>            <span class="pp">Key::</span>Up <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">&quot;Key went up&quot;</span>)<span class="op">,</span></span>
+      <span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>            _ <span class="op">=&gt;</span> <span class="cf">break</span><span class="op">,</span></span>
+      <span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+      <span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+      <span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <p>This spawns a thread and passes bytes through a channel.</p>
+      <h2 id="widgets">Widgets</h2>
+      <p>Widgets are the most advanced parts of creating something like this. Luckily, I was able to “out source” it by forking the awesome <a href="https://github.com/fdehau/tui-rs">tui-rs</a> crate. The documentation for adding documentation is not all there, but it’s easy to understand what’s going on by looking at some of the other backends, <code>termion</code> being most readable for me. I won’t show you how to do this, but you can take a look <a href="https://git.dumrich.com/zui-widgets/tree/src/backend/zui.rs">here</a> for my way.</p>
+      <h3 id="adding">Adding</h3>
+      <p>As <code>zui_widgets</code> is a fork, it is a separate crate (you need both of them):</p>
+      <div class="sourceCode" id="cb12"><pre class="sourceCode toml"><code class="sourceCode toml"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="kw">[</span><span class="dt">dependencies</span><span class="kw">]</span></span>
+      <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="dt">zui-core</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">git</span><span class="op"> =</span> <span class="st">&quot;https://git.dumrich.com/zui&quot;</span> <span class="op">}</span></span>
+      <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="dt">zui-widgets</span> <span class="op">=</span> <span class="op">{ </span><span class="dt">git</span><span class="op"> =</span> <span class="st">&quot;https://git.dumrich.com/zui-widgets&quot;</span> <span class="op">}</span></span></code></pre></div>
+      <blockquote>
+      <p>cargo.toml</p>
+      </blockquote>
+      <h3 id="blocks">Blocks</h3>
+      <p>You can create a block like this:</p>
+      <div class="sourceCode" id="cb13"><pre class="sourceCode rust"><code class="sourceCode rust"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span>io<span class="op">;</span></span>
+      <span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::</span>thread<span class="op">;</span></span>
+      <span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">std::time::</span>Duration<span class="op">;</span></span>
+      <span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_widgets::backend::</span>ZuiBackend<span class="op">;</span></span>
+      <span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_widgets::layout::</span><span class="op">{</span>Constraint<span class="op">,</span> Direction<span class="op">,</span> Layout<span class="op">};</span></span>
+      <span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_widgets::widgets::</span><span class="op">{</span>Block<span class="op">,</span> Borders<span class="op">,</span> Widget<span class="op">};</span></span>
+      <span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_widgets::</span>Terminal<span class="op">;</span></span>
+      <span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="kw">use</span> <span class="pp">zui_core::key::</span>Key<span class="op">;</span></span>
+      <span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="kw">fn</span> main() <span class="op">-&gt;</span> <span class="dt">Result</span><span class="op">&lt;</span>()<span class="op">,</span> <span class="pp">io::</span><span class="bu">Error</span><span class="op">&gt;</span> <span class="op">{</span></span>
+      <span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> stdout <span class="op">=</span> <span class="pp">io::</span>stdout()<span class="op">;</span></span>
+      <span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> backend <span class="op">=</span> <span class="pp">ZuiBackend::</span>new(<span class="op">&amp;</span><span class="kw">mut</span> stdout)<span class="op">;</span></span>
+      <span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">let</span> <span class="kw">mut</span> terminal <span class="op">=</span> <span class="pp">Terminal::</span>new(backend)<span class="op">?;</span></span>
+      <span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a></span>
+      <span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>    terminal<span class="op">.</span>enter_raw_mode()<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb13-16"><a href="#cb13-16" aria-hidden="true" tabindex="-1"></a>    terminal<span class="op">.</span>switch_screen()<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb13-17"><a href="#cb13-17" aria-hidden="true" tabindex="-1"></a>    terminal<span class="op">.</span>draw(<span class="op">|</span>f<span class="op">|</span> <span class="op">{</span></span>
+      <span id="cb13-18"><a href="#cb13-18" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> size <span class="op">=</span> f<span class="op">.</span>size()<span class="op">;</span></span>
+      <span id="cb13-19"><a href="#cb13-19" aria-hidden="true" tabindex="-1"></a>        <span class="kw">let</span> block <span class="op">=</span> <span class="pp">Block::</span><span class="kw">default</span>()<span class="op">.</span>title(<span class="st">&quot;Block&quot;</span>)<span class="op">.</span>borders(<span class="pp">Borders::</span>ALL)<span class="op">;</span></span>
+      <span id="cb13-20"><a href="#cb13-20" aria-hidden="true" tabindex="-1"></a>        f<span class="op">.</span>render_widget(block<span class="op">,</span> size)<span class="op">;</span></span>
+      <span id="cb13-21"><a href="#cb13-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span>)<span class="op">?;</span></span>
+      <span id="cb13-22"><a href="#cb13-22" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> key <span class="kw">in</span> terminal<span class="op">.</span>keys(<span class="pp">io::</span>stdin()) <span class="op">{</span></span>
+      <span id="cb13-23"><a href="#cb13-23" aria-hidden="true" tabindex="-1"></a>        terminal<span class="op">.</span>set_cursor(<span class="dv">2</span><span class="op">,</span> <span class="dv">2</span>)<span class="op">.</span>unwrap()<span class="op">;</span></span>
+      <span id="cb13-24"><a href="#cb13-24" aria-hidden="true" tabindex="-1"></a>        <span class="cf">match</span> key <span class="op">{</span></span>
+      <span id="cb13-25"><a href="#cb13-25" aria-hidden="true" tabindex="-1"></a>            <span class="pp">Key::</span>Ctrl(<span class="ch">&#39;c&#39;</span>) <span class="op">=&gt;</span> <span class="cf">break</span><span class="op">,</span></span>
+      <span id="cb13-26"><a href="#cb13-26" aria-hidden="true" tabindex="-1"></a>            _ <span class="op">=&gt;</span> <span class="pp">println!</span>(<span class="st">&quot;wrong&quot;</span>)<span class="op">,</span></span>
+      <span id="cb13-27"><a href="#cb13-27" aria-hidden="true" tabindex="-1"></a>        <span class="op">}</span></span>
+      <span id="cb13-28"><a href="#cb13-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+      <span id="cb13-29"><a href="#cb13-29" aria-hidden="true" tabindex="-1"></a>    <span class="cn">Ok</span>(())</span>
+      <span id="cb13-30"><a href="#cb13-30" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code></pre></div>
+      <p>In this example, we demonstrate more functionality by creating a backend and a terminal. If we use <code>zui_core</code> alone, we wouldn’t need to do create a backend, but for widgets we do.</p>
+      <p>The <code>terminal</code> is basically the terminal from <code>zui_core</code>, just with methods to create widgets and position.</p>
+      <p>First we enter raw mode, and then we switch to another screen. Then, we draw a block and render it.</p>
+      <p>Finally, we iterate over the keys and print a message.</p>
+      <h2 id="conclusion">Conclusion</h2>
+      <p>I’m getting lazy now, so if you want to know more about widgets in <code>zui</code>, go to the <a href="https://docs.rs/tui/0.16.0/tui/index.html">tui</a> documentation. It has absolutely phenomenal docs, and many examples, primarily in the <code>Widgets</code> module, as well as various examples on <code>GitHub</code>.</p>
+      <p>As always, email me if you have questions, and good day.</p>
+  </article>
+</body>
+</html>
